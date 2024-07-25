@@ -1,0 +1,6 @@
+name: 'Hello User'
+type: module
+core_version_requirement: ^10
+description: 'My first Custom Module.'
+package: My Modules
+  

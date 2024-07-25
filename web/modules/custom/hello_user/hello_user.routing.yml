@@ -1,0 +1,8 @@
+hello_user.content:
+  path: '/hello-user'
+  defaults: 
+    _controller: '\Drupal\hello_user\Controller\HelloUserController::content'
+    _title: 'Hello User Greeting'
+  requirements:
+    _permission: 'user custom permission'
+    
