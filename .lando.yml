@@ -1,0 +1,6 @@
+name: drupal-backend
+recipe: drupal10
+config:
+  webroot: web
+  via: nginx
+  php: 8.1
