@@ -1,0 +1,12 @@
+custom_config_form.settings:
+  title: My Config Form
+  description: Menu Link for Custom Config Form.
+  route_name: custom_config_form.settings
+  parent: system.admin_config_system
+  weight: 10
+
+custom_config_form.otl_message_class:
+  title: One Time Login Link of User
+  parent: system.admin_config_system
+  route_name: custom_config_form.otl_message_class
+  weight: 11

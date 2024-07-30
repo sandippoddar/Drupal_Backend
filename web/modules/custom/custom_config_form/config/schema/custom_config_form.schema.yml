@@ -1,0 +1,17 @@
+# Schema for the configuration files of the Custom config form module.
+custom_config_form.settings:
+  type: config_object
+  label: 'Custom config form settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'
+
+# Schema for the configuration files of the Custom config form module.
+custom_config_form.otl_message_class:
+  type: config_object
+  label: 'Custom Otl form settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'
