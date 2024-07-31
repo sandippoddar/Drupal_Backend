@@ -1,0 +1,16 @@
+custom_config_form.settings:
+  path: '/admin/config/system/settings'
+  defaults:
+    _title: 'Contact Details'
+    _form: '\Drupal\custom_config_form\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+custom_config_form.otl_message_class:
+  path: '/admin/config/system/otl-message-class'
+  defaults:
+    _title: 'One Time Login Link of User'
+    _form: 'Drupal\custom_config_form\Form\OtlMessageClass'
+  requirements:
+    _permission: 'administer site configuration'
