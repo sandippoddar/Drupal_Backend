@@ -1,0 +1,7 @@
+sample_block.block:
+  path: '/sample-block/block'
+  defaults:
+    _title: 'Block Data'
+    _form: 'Drupal\sample_block\Form\BlockForm'
+  requirements:
+    _permission: 'access content'

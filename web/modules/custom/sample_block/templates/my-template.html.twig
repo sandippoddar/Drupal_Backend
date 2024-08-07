@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Group Name</th>
+      <th>Label 1 Name</th>
+      <th>Label 1 Value</th>
+      <th>Label 2 Name</th>
+      <th>Label 2 Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+      <tr>
+        <td>{{ row.group_name }}</td>
+        <td>{{ row.label_1_name }}</td>
+        <td>{{ row.label_1_value }}</td>
+        <td>{{ row.label_2_name }}</td>
+        <td>{{ row.label_2_value }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
