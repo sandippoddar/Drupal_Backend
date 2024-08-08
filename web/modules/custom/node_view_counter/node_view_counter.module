@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for node_view_counter module.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implementation of the custom hook.
+ *
+ * @param int $count
+ *   The current view count of the node.
+ * 
+ * @return void
+ */
+function node_view_counter_active_count(int $count) {
+  $messenger = \Drupal::messenger();
+  $messenger->addStatus(t('This node has been viewed @count times.', ['@count' => $count]));
+}
+
+/**
+ * Hook function to implement increase View Count in a Sesson.
+ *
+ * @param array $build
+ *   A renderable array. 
+ * @param NodeInterface $node
+ *   node object.
+ * 
+ * @return void
+ */
+function node_view_counter_node_view(array &$build, NodeInterface $node) {
+  // Get the current session.
+  $session = \Drupal::request()->getSession();
+  // Get the node ID.
+  $nid = $node->id();
+  // Add the tag to the cache.
+  $build['#cache'] = [
+    '#cache' => [
+      'contexts' => ['session'],
+      'tags' => ['node:'.$nid],
+    ],
+  ];
+
+  $count = $session->get('node_view_count_' . $nid, 0);
+  $count++;
+  $session->set('node_view_count_' . $nid, $count);
+  Cache::invalidateTags(['node:'.$nid]);
+  \Drupal::moduleHandler()->invokeAll('active_count', [$count]);
+}

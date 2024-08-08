@@ -1,0 +1,5 @@
+name: 'Node View Counter'
+type: module
+description: 'This module implements to See how many time a Node is Viewed in a Session.'
+package: My Modules
+core_version_requirement: ^10 || ^11
