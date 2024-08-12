@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function sample_block_schema() {
+  $schema['sample_block_data'] = [
+    'description' => 'Stores the form data submitted by the dynamic form.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique ID for each entry.',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'group_name' => [
+        'description' => 'Name of the group.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'label_1_name' => [
+        'description' => 'Name of the first label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'label_1_value' => [
+        'description' => 'Value of the first label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'label_2_name' => [
+        'description' => 'Name of the second label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'label_2_value' => [
+        'description' => 'Value of the second label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

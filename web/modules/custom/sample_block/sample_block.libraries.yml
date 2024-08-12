@@ -1,0 +1,4 @@
+custom:
+  css:
+    theme:
+      css/my_block.css: {}

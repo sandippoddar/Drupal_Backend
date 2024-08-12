@@ -1,0 +1,5 @@
+name: 'Sample Block'
+type: module
+description: 'To Show Form Data as a Block.'
+package: Sandip Modules
+core_version_requirement: ^10 || ^11
