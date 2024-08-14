@@ -1,0 +1,5 @@
+name: 'RGB Field Module'
+type: module
+description: 'This is module use to implement custom field to accept RGB Colour.'
+package: Sandip Modules
+core_version_requirement: ^10
