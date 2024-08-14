@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements hook_field_access().
+ */
+function rgb_field_module_entity_field_access($operation, $field_definition, $entity, $account) {
+  // Check if the field is our custom field.
+  if ($field_definition->getName() === 'field_rgb') {
+    // Only allow admin users to view or edit the field.
+    $roles = \Drupal::currentUser()->getRoles();
+    if ($operation === 'view') {
+      // Check if the user is an administrator.
+      if (in_array('administrator', $roles)) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+  }
+  
+  // Return neutral access result for other fields.
+  return AccessResult::neutral();
+}
