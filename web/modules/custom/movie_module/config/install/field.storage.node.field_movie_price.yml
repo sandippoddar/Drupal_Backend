@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - movie_module
+id: node.field_movie_price
+field_name: field_movie_price
+entity_type: node
+type: decimal
+settings:
+  scale: 2
+  precision: 10
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
