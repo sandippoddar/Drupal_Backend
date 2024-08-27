@@ -1,0 +1,7 @@
+name: 'Movie Module'
+type: module
+description: 'This module describes to create custom Bundle.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - field
