@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - movie_module
+id: movie
+type: movie
+label: 'Movie'
+description: 'A content type to store movie information.'
+help: ''
+new_revision: false
+display_submitted: false
+preview_mode: 1

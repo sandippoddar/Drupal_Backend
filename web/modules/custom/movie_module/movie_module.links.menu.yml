@@ -1,0 +1,12 @@
+entity.movie_config_entity.overview:
+  title: Movie Config Entities
+  parent: system.admin_config_system
+  description: 'List of movie config entities to extend site functionality.'
+  route_name: entity.movie_config_entity.collection
+
+movie_module.budget:
+  title: Budget
+  description: To check Budget of every movie node.
+  parent: system.admin_config_system
+  route_name: movie_module.budget
+  weight: 10
