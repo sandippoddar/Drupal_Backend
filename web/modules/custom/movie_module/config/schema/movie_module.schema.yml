@@ -1,0 +1,24 @@
+movie_module.movie_config_entity.*:
+  type: config_entity
+  label: 'Movie Config Entity'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    year:
+      type: string
+      label: 'Year'
+
+# Schema for the configuration files of the Movie Module module.
+movie_module.settings:
+  type: config_object
+  label: 'Movie Module settings'
+  mapping:
+    budget:
+      type: float
+      label: ''

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movie_image
+    - node.type.movie
+id: node.movie.field_movie_image
+field_name: field_movie_image
+entity_type: node
+bundle: movie
+label: 'Image'
+description: 'Upload an image for the movie.'
+required: false
+translatable: true
+default_value: {  }
+settings: {  }
+field_type: image
