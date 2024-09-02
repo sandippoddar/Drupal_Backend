@@ -1,0 +1,27 @@
+
+<div>
+  <h2>Event Counts by Year</h2>
+  <ul>
+    {% for year, count in eventDetails %}
+      <li>{{ year }}: {{ count }} events</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div>
+  <h2>Event Counts by Quarter</h2>
+  <ul>
+    {% for quarter, count in eventDate %}
+      <li>{{ quarter }}: {{ count }} events</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div>
+  <h2>Event Counts by Type</h2>
+  <ul>
+    {% for type, count in eventType %}
+      <li>{{ type }}: {{ count }} events</li>
+    {% endfor %}
+  </ul>
+</div>

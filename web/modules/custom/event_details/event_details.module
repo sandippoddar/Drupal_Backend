@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function event_details_theme($existing, $type, $theme, $path) {
+  return [
+    'events_dashboard' => [
+      'variables' => [
+        'eventDetails' => [],
+        'eventDate' => [],
+        'eventType' => [],
+      ],
+    ],
+
+    'term_dashboard' => [
+      'variables' => [
+        'termInfo' => [],
+        'nodeInfo' => [],
+      ]
+    ]
+  ];
+}

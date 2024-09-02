@@ -1,0 +1,15 @@
+event_details.example:
+  path: '/event-details'
+  defaults:
+    _title: 'Event Details'
+    _controller: '\Drupal\event_details\Controller\EventDetailsController::dashboard'
+  requirements:
+    _permission: 'access content'
+
+event_details.term_details:
+  path: '/term-details'
+  defaults:
+    _title: 'Term Details'
+    _form: 'Drupal\event_details\Form\TermDetailsForm'
+  requirements:
+    _permission: 'access content'

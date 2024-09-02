@@ -1,0 +1,16 @@
+{# templates/term-details.html.twig #}
+
+<ul>
+    <li>
+        <strong>Term ID:</strong> {{ termInfo.tid }}<br>
+        <strong>Term UUID:</strong> {{ termInfo.uuid }}<br>
+    </li>
+</ul>
+<h1>Node Title</h1>
+<ul>
+{% for node in nodeInfo %}
+    <li>
+        {{ node.title }}<br>
+    </li>
+{% endfor %}
+</ul>

@@ -1,0 +1,5 @@
+name: 'Event Details'
+type: module
+description: 'Hiii'
+package: Sandip Modules
+core_version_requirement: ^10 || ^11
